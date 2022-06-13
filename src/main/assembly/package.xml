@@ -1,0 +1,39 @@
+<assembly xmlns="http://maven.apache.org/ASSEMBLY/2.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.0.0 http://maven.apache.org/xsd/assembly-2.0.0.xsd">
+
+    <id>jar-with-dependencies</id>
+
+    <formats>
+        <format>jar</format>
+    </formats>
+
+    <includeBaseDirectory>false</includeBaseDirectory>
+
+    <dependencySets>
+        <dependencySet>
+            <useProjectArtifact>true</useProjectArtifact>
+            <unpack>true</unpack>
+            <outputDirectory>/</outputDirectory>
+            <scope>runtime</scope>
+            <includes>
+                <include>com.auth0:java-jwt</include>
+            </includes>
+        </dependencySet>
+    </dependencySets>
+
+    <fileSets>
+        <fileSet>
+            <directory>target/classes/com/</directory>
+            <outputDirectory>com/</outputDirectory>
+            <filtered>false</filtered>
+        </fileSet>
+        <fileSet>
+            <directory>target/classes/META-INF/</directory>
+            <outputDirectory>META-INF/</outputDirectory>
+            <filtered>false</filtered>
+        </fileSet>
+    </fileSets>
+
+
+</assembly>

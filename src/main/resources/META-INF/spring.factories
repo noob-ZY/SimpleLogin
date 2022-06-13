@@ -1,0 +1,5 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.noobzy.simpleLogin.autoConfig.LoginUserStorageConfiguration,\
+com.noobzy.simpleLogin.autoConfig.MainConfiguration,\
+com.noobzy.simpleLogin.autoConfig.FilterConfiguration,\
+com.noobzy.simpleLogin.autoConfig.AopConfiguration
